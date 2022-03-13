@@ -17,4 +17,4 @@ Add new entries under the `markdown` folder. When finished, run the script:
 npm run start
 ```
 
-The generated HTML files will appear in the root folder.
+The generated HTML files will appear in the `dist` folder.
