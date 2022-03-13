@@ -29,7 +29,7 @@ fs.readdirSync("./markdown").forEach((fn) => {
   const slug = fn.replace(".md", "");
 
   fs.writeFileSync(
-    `${slug}.html`,
+    `dist/${slug}.html`,
     minify(
       template.replace(/KEY_TITLE/g, data.title).replace("KEY_BODY", body),
       minifyOptions
@@ -48,6 +48,6 @@ const listEl = entries
   .join("\n");
 
 fs.writeFileSync(
-  "index.html",
+  "dist/index.html",
   minify(template.replace("KEY_ENTRIES", listEl), minifyOptions)
 );
